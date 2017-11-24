@@ -50,7 +50,7 @@ object Preprocessor {
       .option("header", true)  // Use first line of all files as header
       .option("inferSchema", "true") // Try to infer the data types of each column
       .option("nullValue", "false")  // replace strings "false" (that indicates missing data) by null values
-      .csv("/home/robin/Téléchargements/train.csv")
+      .csv("../../TP_ParisTech_2017_2018_starter/TP_ParisTech_2017_2018_starter/train.csv")
 
     // b) nombre de lignes et colonnes
     println(s"Total number of rows: ${df.count}")
@@ -210,7 +210,7 @@ object Preprocessor {
 
     /** WRITING DATAFRAME **/
 
-    dfFiltered.write.mode(SaveMode.Overwrite).parquet("/home/robin/Documents/TP#Spark")
+    dfFiltered.write.mode(SaveMode.Overwrite).parquet("../TP_ParisTech_2017_2018_starter/TP_ParisTech_2017_2018_starter/parquet_file")
 
 
 

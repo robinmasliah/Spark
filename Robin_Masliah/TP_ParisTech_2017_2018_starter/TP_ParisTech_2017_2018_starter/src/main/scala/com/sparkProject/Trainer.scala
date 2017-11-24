@@ -59,7 +59,8 @@ object Trainer {
       .option("header", true)  // Use first line of all files as header
       .option("inferSchema", "true") // Try to infer the data types of each column
       .option("nullValue", "false")  // replace strings "false" (that indicates missing data) by null values
-      .parquet("/home/robin/Documents/TP#Spark")
+      .parquet("../TP_ParisTech_2017_2018_starter/TP_ParisTech_2017_2018_starter/parquet_file")
+    //TP_ParisTech_2017_2018_starter/TP_ParisTech_2017_2018_starter/parquet_file
 
     df.show()
     println(df.count)
